@@ -101,9 +101,47 @@
             margin-top: 3rem;
             text-align: center;
         }
+        #passcodeForm, #content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #content {
+            display: none;
+        }
     </style>
 </head>
 <body>
+
+
+
+
+
+	
+    <div id="passcodeForm">
+        <h2>Enter Passcode</h2>
+        <input type="password" id="passcodeInput" placeholder="Enter passcode">
+        <button onclick="checkPasscode()">Submit</button>
+    </div>
+    <script>
+        function checkPasscode() {
+            const correctPasscode = "7410"; // Change this to your desired passcode
+            const input = document.getElementById("passcodeInput").value;
+            
+            if (input === correctPasscode) {
+                document.getElementById("passcodeForm").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("Incorrect passcode. Please try again.");
+            }
+        }
+    </script>
+
+
+
+	
+	
     <header class="header">
         <div class="content-container">
             <div class="header-content">
